@@ -1,0 +1,438 @@
+@charset "UTF-8";
+body {
+    margin:0;
+  background:#FECC34; /* 外側の黄色 */
+}
+.header-wrap__hero {
+    background-image: url("../img/top.svg");
+    background-size: cover;
+    background-position: 60% 60%;
+    width: 100%;
+    height:600px;
+    position: relative;
+}
+.header-wrap__hero__title {
+    position:absolute;
+    top:30%;
+    left:50%;
+    background-color: #ffffff;
+    padding: 1% 1.5%
+}
+.header-wrap__hero__title__img {
+    width: 440px;
+}
+.header-wrap__hero__title__img img{
+    width: 100%;
+}
+.header-wrap__nav {
+    display:flex;
+    justify-content:space-between;
+    margin: 0 50px;
+}
+.header-wrap__nav__logo{
+    position:relative;
+    display:inline-block;
+     z-index:1;
+}
+.header-wrap__nav__logo::after{
+    content:"";
+  position:absolute;
+  inset:10px -150px -2px -150px;                  /* 親いっぱい */
+  background-color:#FECC34;
+  -webkit-clip-path: polygon(40% 0, 60% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(40% 0, 60% 0, 100% 100%, 0% 100%);
+  z-index:0;
+  border-radius: 0;      
+  transform: translate(0, -85px);    /* 必要なら */
+} 
+.header-wrap__nav__logo img{
+  position: relative;
+  z-index:999;
+  display:block;
+  margin-top:-18px;
+}
+.header-wrap__nav__right {
+        padding:15px 0 65px 0;
+    display:flex;
+    align-items:center;
+    width:60%;
+    justify-content: space-between;
+}
+.header-wrap__nav__right__menu {
+    display:flex;
+    justify-content: space-between;
+    width:35%;
+}
+.header-wrap__nav__right__menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+}
+.header-wrap__nav__right__sns {
+    display:flex;
+    justify-content: space-between;
+    width:11%;
+}
+.header-wrap__nav__right__fmlogo {
+    position:relative;
+     z-index:1;
+}
+/* 外側（枠） */
+.header-wrap__nav__right__fmlogo::after{
+  content:"";
+  position:absolute;
+  width:217px;
+  height:217px;
+  border-radius:50%;
+  background:#AC8100;
+  transform: translate(-45px, -155px);
+  z-index:0;
+}
+
+/* 内側（中身） */
+.header-wrap__nav__right__fmlogo::before{
+  content:"";
+  position:absolute;
+  width:205px;     
+  height:205px;
+  left:-39px;
+  top:27px;
+  border-radius:50%;
+  background:#FECC34;
+  transform: translate(0, -100px);
+  z-index:1;
+}
+.header-wrap__nav__right__fmlogo a img {
+    position: relative;
+    z-index:1;
+    display:block;
+}
+.header-wrap__nav__right__fmlogo .fmlogo-deco{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2; /* 必要に応じて */
+}
+.header-wrap__nav__right__fmlogo .fmlogo-deco::before{
+  content:"";
+  position:absolute;
+  width: 400px;
+  height: 50px;
+  background-color:#FECC34;
+  left:-220px;
+  bottom:-63px;
+}
+.about {
+      position: relative;
+  width: 100%;
+  overflow: hidden; /* 円のはみ出しを整える */
+  background: url("../img/bg2.svg") center/cover no-repeat;
+}
+.about-wrap {
+  width: 102%;
+  margin: 0 auto;
+  background: url(../img/前面オブジェクトで型抜き\ 1.svg) 45%/cover no-repeat;
+}
+.about-wrap__body {
+    align-items: center;
+    max-width:1100px;
+    padding:80px 0;
+     text-align: center;
+    width:60%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+/* 見出し全体 */
+.catch{
+  position: relative;
+  display: inline-block;
+  color: #FECC34;
+  font-family: 'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif;
+  line-height: 0.85;
+}
+
+/* 大きい単語 */
+.catch__word{
+  display:block;
+  font-weight: 100;
+  font-size: 90px;
+}
+
+/* 先頭文字をさらに大きく */
+.catch__word .cap{
+  font-size: 140px;
+  font-weight: 100;
+    display:inline-block;  
+  transform-origin: left center;
+  margin-right: -0.09em;   
+}
+
+/* From（上に小さく） */
+.catch__from{
+  position:absolute;
+  top: 15px;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: .2em;
+}
+.catch__to{
+  position:absolute;
+  left: 30px;
+  bottom: 15px;              /* ←ここで上下位置を合わせる */
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: .2em;
+  text-transform: lowercase;
+  line-height: 35px;
+  text-align: start;
+}
+
+/* 2行目（World）を少し右へ（見本っぽく） */
+.catch__word--b{
+  padding-left: 40px;
+  font-size:120px;      /* ←World を右に寄せる */
+}
+.about-wrap__body__left__head {
+    font-size:30px;
+    color:#ffffff;
+    text-align: center;
+    margin: 30px auto;
+}
+.about-wrap__body__left__txt {
+    width:60%;
+    font-size:16px;
+    font-weight:500;
+    line-height: 2;
+    color:#ffffff;
+    text-align: left;
+      letter-spacing: 4px;
+}
+.about-wrap__body__right {
+    position: static;
+    width:50%;
+}
+.about-wrap__body__right__img {
+ position: absolute;
+  z-index: 1;
+  left: 59.8%;
+  top: 35.5%;
+  width:clamp(20.625rem, 2.5rem + 20vw, 27.5rem);
+  pointer-events: none;
+}
+.about-wrap__body__right__img img {
+      width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* voiceセクション */
+:root{
+  --voice-card-w: 340px; /* 1枚の幅（variableWidthの基準） */
+}
+.voice__ttl {
+    width:25%;
+    margin: 20px auto;
+}
+.voice__ttl img {
+    width:100%
+}
+/* セクション余白 */
+.voice-wrap__group{
+  margin-bottom: 60px;
+}
+
+.voice-wrap__group__body{
+  overflow: hidden;
+  position: relative;
+}
+
+/* ULはslickが制御するので余計なtransform/transitionは付けない */
+.voice-wrap__group__body__list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* slickを滑らかに（GPU） */
+.voice-wrap__group__body__list .slick-track{
+    display: flex;
+  align-items: center;
+  gap:20px;
+}
+
+/* 1枚（li） */
+.voice-wrap__group__body__list__item{
+  width: var(--voice-card-w);
+    transform: scale(0.9);
+  transition: transform .35s ease;
+}
+
+/* クリック範囲 */
+.voice-wrap__group__body__list__item a{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* カード */
+.voice-wrap__group__body__list__item article{
+  border-radius: var(--voice-radius);
+  overflow: hidden;
+}
+
+.voice-wrap__group__body__list .slick-slide{
+  transform: scale(.94);
+  transform-origin: center center;
+  transition: transform .35s ease, opacity .35s ease;
+  height: auto;
+}
+
+.voice-wrap__group__body__list .slick-current{
+  opacity: 1;
+}
+
+/* 写真枠（固定高：カクつき防止） */
+.voice-wrap__group__body__list__item figure{
+  aspect-ratio: 4 / 3; 
+  width: 100%;
+  overflow: visible;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voice-wrap__group__body__list .slick-center figure img:hover{
+  transform: scale(1.06);
+}
+.voice-wrap__group__body__list .slick-center{
+  transform: scale(1.04);
+  opacity: 1;
+  z-index: 2;
+}
+.voice-wrap__group__body__list__item figure img{
+  width:100%;
+  height:100%;
+  -o-object-fit:contain;
+     object-fit:contain;
+  display:block;
+
+}
+
+/* hover：imgだけzoom（サイズは変えない/切り取らない） */
+.voice-wrap__group__body__list__item figure img:hover{
+  transform: scale(1.06); /* 1.03〜1.08で調整 */
+}
+
+/* テキスト */
+.voice-wrap__group__body__list__item__date{
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.voice-wrap__group__body__list__item__text{
+  margin-top: 10px;
+  line-height: 2;
+  font-size: 18px;
+}
+
+/* =========================
+  Slider UI (Prev/Next + Count)
+========================= */
+
+.stories-ui{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.slick-nav-box{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px auto 0 auto;
+}
+
+.slick-arrow{
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.18);
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.slick-arrow::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  margin:auto;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid rgba(0,0,0,.75);
+  border-right: 2px solid rgba(0,0,0,.75);
+  transform: rotate(225deg);
+}
+
+.slick-next::before{
+  transform: rotate(45deg);
+}
+
+.slick-count .txt{
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: .04em;
+}
+/*video*/
+.video-wrap {
+   width:100%; 
+}
+.video-wrap img {
+    width:100%;
+}
+
+/* kofu */
+.kofu-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+.kofu-wrap__ttl{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:110px;
+}
+.kofu-wrap__ttl small{
+    font-size:50px;
+}
+.kofu-wrap__body {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.kofu-wrap__body__left {
+    width:45%;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.kofu-wrap__body__left__head h3 {
+    font-size:40px;
+}
+.kofu-wrap__body__left__txt,
+ .mt-20{
+    font-size:20px;
+    line-height: 2;
+    font-weight: 100;
+}
+.kofu-wrap__body__right {
+    width:45%;
+}
+.kofu-wrap__body__right img{
+    width:100%;
+}

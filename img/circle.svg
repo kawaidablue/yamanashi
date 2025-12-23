@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="315" height="315" viewBox="0 0 315 315">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-7 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #fecc34;
+      }
+
+      .cls-1 {
+        opacity: 0.7;
+      }
+
+      .cls-2 {
+        opacity: 0.4;
+      }
+
+      .cls-4 {
+        opacity: 0.2;
+      }
+
+      .cls-5 {
+        stroke-width: 2px;
+      }
+
+      .cls-6 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ_134" data-name="グループ 134" transform="translate(-938 -1016)">
+    <g id="楕円形_2" data-name="楕円形 2" class="cls-1" transform="translate(1016 1094)">
+      <circle class="cls-6" cx="79.5" cy="79.5" r="79.5"/>
+      <circle class="cls-7" cx="79.5" cy="79.5" r="79"/>
+    </g>
+    <g id="楕円形_3" data-name="楕円形 3" class="cls-2" transform="translate(985 1063)">
+      <circle class="cls-6" cx="111" cy="111" r="111"/>
+      <circle class="cls-7" cx="111" cy="111" r="110.5"/>
+    </g>
+    <g id="楕円形_4" data-name="楕円形 4" class="cls-3" transform="translate(1036 1114)">
+      <circle class="cls-6" cx="60" cy="60" r="60"/>
+      <circle class="cls-7" cx="60" cy="60" r="59.5"/>
+    </g>
+    <g id="楕円形_5" data-name="楕円形 5" class="cls-4" transform="translate(938 1016)">
+      <circle class="cls-6" cx="157.5" cy="157.5" r="157.5"/>
+      <circle class="cls-7" cx="157.5" cy="157.5" r="157"/>
+    </g>
+    <g id="楕円形_6" data-name="楕円形 6" class="cls-5" transform="translate(1051 1129)">
+      <circle class="cls-6" cx="45" cy="45" r="45"/>
+      <circle class="cls-7" cx="45" cy="45" r="44"/>
+    </g>
+  </g>
+</svg>
