@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>THE YAMANASHI INTERVIEW</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+  // 次ページ側：描画前に本文を隠す（ふわっの準備）
+  if (sessionStorage.getItem("PAGE_WIPE_NEXT") === "1") {
+    document.documentElement.classList.add("is-entering");
+  }
+</script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/policy.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header class="header" id="header">
+        <div class="header-wrap">
+          <nav class="header-wrap__nav">
+            <div class="header-wrap__nav__logo">
+              <a href="index.html">
+                <img src="img/logo.svg" alt="THE YAMANASHI INTERVIEW" />
+              </a>
+            </div>
+            <div class="header-wrap__nav__right">
+              <ul class="header-wrap__nav__right__menu">
+                <li class="header-wrap__nav__right__menu__item">
+                  <a href="contact.html" class="header-wrap__nav__right__menu__item__link">
+                    contact
+                  </a>
+                </li>
+                <li class="header-wrap__nav__right__menu__item">
+                  <a href="policy.html" class="header-wrap__nav__right__menu__item__link">
+                    policy
+                  </a>
+                </li>
+              </ul>
+              <div class="header-wrap__nav__right__fmlogo">
+                <a
+                  href="https://www.fujimishobo.co.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/footerlogo.svg" alt="FM.甲府" />
+                  <span class="fmlogo-deco"></span>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section class="policy" id="policy">
+        <div class="policy-wrap">
+          <div class="policy-wrap__ttl subttl">
+            <h2><strong>P</strong>rivacy <strong>P</strong>olicy</h2>
+          </div>
+          <div class="policy-wrap__content">
+            <p>
+                The YAMANASHI INTERVIEW -ビジネスと情熱の交差点-（以下、「本メディア」という）は、本メディア上で収集した全ての個人情報について、以下の方針に基づきその利用目的および安全対策を定めます。
+            </p>
+            <h3>個人情報の利用目的</h3>
+            <p>
+                本メディア上で収集した個人情報は、以下の目的で利用いたします。
+            </p>
+            <p>
+                1.本メディアの利用状況を分析し、サービスの改善を図るため<br>
+                2.ユーザーへのお知らせやマーケティング情報を提供するため<br>
+                3.他事業者へ業務を委託する場合（業務委託先に対しては、本メディアと同様の個人情報保護措置を求めます）
+            </p>
+            <h3>個人情報の収集</h3>
+            <p>
+                本メディアは、個人情報の安全管理のために、以下の措置を講じます。<br>
+                本メディアのサービス向上および機能実現のために、個人情報を収集する場合は、あらかじめその利用目的を明示し、同意を得た上で収集いたします。<br>
+                収集した個人情報は、同意いただいた利用目的の範囲内でのみ使用し、無断でその他の目的に利用することはありません。
+            </p>
+             <h3>個人情報の安全管理</h3>
+             <p>
+                本メディアは、個人情報の安全管理のために、以下の措置を講じます。<br>
+                1.社内規定および管理体制の整備<br>
+                2.従業員への適切な教育・指導<br>
+                3.個人情報への不正アクセス、紛失、破壊、改ざん、漏洩を防止するための技術的および物理的な対策<br>
+                4.継続的な運用改善の実施
+             </p>
+             <h3>個人情報の開示・訂正・削除</h3>
+             <p>
+                ご登録いただいた個人情報の開示・訂正・削除を希望される場合は、以下の問い合わせフォームよりご連絡ください。<br>
+                内容の確認を行い、速やかに対応いたします。<br>
+                ただし、情報の開示が困難な場合や、費用が発生する場合は、事前にその旨をご案内いたします。
+             </p>
+             <a href="contact.html">
+                個人情報に関するお問い合わせ窓口
+             </a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="footer-wrap">
+          <a href="#" class="footer-wrap__logo">
+            <img src="img/footerlogo.svg" alt="footerロゴ" />
+          </a>
+          <div class="copylight">
+            <p>Copyright © AAAAA FM. All Rights Reserved.</p>
+          </div>
+        </div>
+        <a href="#top" class="page_top"><span class="dli-arrow-up"></span></a>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="js/page.js"></script>
+      <div class="page-wipe" id="pageWipe" aria-hidden="true">
+        <div class="page-wipe__panel"></div>
+    </div>
+  </body>
+</html>

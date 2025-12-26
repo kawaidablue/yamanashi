@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>THE YAMANASHI INTERVIEW</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // 次ページ側：描画前に本文を隠す（ふわっの準備）
+      if (sessionStorage.getItem("PAGE_WIPE_NEXT") === "1") {
+        document.documentElement.classList.add("is-entering");
+      }
+    </script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header class="header" id="header">
+        <div class="header-wrap">
+          <nav class="header-wrap__nav">
+            <div class="header-wrap__nav__logo">
+              <a href="index.html">
+                <img src="img/logo.svg" alt="THE YAMANASHI INTERVIEW" />
+              </a>
+            </div>
+            <div class="header-wrap__nav__right">
+              <ul class="header-wrap__nav__right__menu">
+                <li class="header-wrap__nav__right__menu__item">
+                  <a
+                    href="contact.html"
+                    class="header-wrap__nav__right__menu__item__link"
+                  >
+                    contact
+                  </a>
+                </li>
+                <li class="header-wrap__nav__right__menu__item">
+                  <a
+                    href="policy.html"
+                    class="header-wrap__nav__right__menu__item__link"
+                  >
+                    policy
+                  </a>
+                </li>
+              </ul>
+              <div class="header-wrap__nav__right__fmlogo">
+                <a
+                  href="https://www.fujimishobo.co.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/footerlogo.svg" alt="FM.甲府" />
+                  <span class="fmlogo-deco"></span>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section class="contact" id="contact">
+        <div class="contact-wrap">
+          <div class="contact-wrap__title subttl">
+            <h2><strong>C</strong>ontact</h2>
+          </div>
+          <div class="contact-wrap__form">
+            <form action="" method="post">
+              <div class="contact-wrap__form__group">
+                <label for="name">お名前<span class="required">*</span></label>
+                <input
+                  id="name"
+                  name="name"
+                  placeholder="例) 山田太郎"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="contact-wrap__form__group">
+                <label for="name"
+                  >ふりがな<span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  name="furigana"
+                  placeholder="例）やまだたろう"
+                  value=""
+                />
+              </div>
+              <div class="contact-wrap__form__group">
+                <label for="name">会社名<span class="required">*</span></label>
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="例）山田株式会社"
+                  value=""
+                />
+              </div>
+              <div class="contact-wrap__form__group">
+                <label for="email"
+                  >メールアドレス<span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="例）guest@example.com"
+                  value=""
+                />
+              </div>
+              <div class="contact-wrap__form__group">
+                <label for="email"
+                  >メールアドレス確認<span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="例）guest@example.com"
+                  value=""
+                />
+              </div>
+              <div class="contact-wrap__form__group">
+                <label for="tel">電話番号<span class="required">*</span></label>
+                <input
+                  type="text"
+                  name="tel"
+                  placeholder="例 000-0000-0000"
+                  value=""
+                />
+              </div>
+              <div class="contact-wrap__form__group">
+                <label for="message"
+                  >お問い合わせ内容<span class="required">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="contact-wrap__form__group check-group">
+                <div class="checkboxtxt">
+                  <p>
+                    各種お問合せにつきましては、下記フォームにてご連絡ください。
+                    ご記入いただいた内容に基づき、担当者より折り返しご連絡させていただきます。なお、お問合せの内容によっては、ご回答までにお時間をいただく場合がございます。
+                  </p>
+                </div>
+                <div class="checkboxinput">
+                  <input type="checkbox" id="agree" name="agree" required />
+                  <span
+                    ><a href="policy.html">プライバシーポリシー</a
+                    >に同意する</span
+                  >
+                </div>
+              </div>
+              <button type="submit" class="contact-wrap__form__submit">
+                送信
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer-wrap">
+        <a href="#" class="footer-wrap__logo">
+          <img src="img/footerlogo.svg" alt="footerロゴ" />
+        </a>
+        <div class="copylight">
+          <p>Copyright © AAAAA FM. All Rights Reserved.</p>
+        </div>
+      </div>
+      <a href="#top" class="page_top"><span class="dli-arrow-up"></span></a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/page.js"></script>
+    <div class="page-wipe" id="pageWipe" aria-hidden="true">
+      <div class="page-wipe__panel"></div>
+    </div>
+  </body>
+</html>

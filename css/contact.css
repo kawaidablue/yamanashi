@@ -1,0 +1,155 @@
+@charset "UTF-8";
+.contact-wrap__form {
+    max-width: 800px;
+    margin: 80px auto;
+    box-sizing: border-box;
+    color: #000000;
+    align-items: center;
+}
+.contact-wrap__form__group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+  
+  
+  /* 入力系（共通） */
+  .contact-wrap__form input[type="text"],
+  .contact-wrap__form input[type="email"],
+  .contact-wrap__form textarea {
+    width: 100%;     
+    border: none;
+    padding: 18px 14px;
+    line-height: 1.8;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.06) inset,
+                0 2px 10px rgba(0,0,0,.15);
+    outline: none;
+    box-sizing: border-box;
+    border:solid 2px #000000;
+    background-color: #fff
+  }
+  .contact-wrap__form input::-webkit-input-placeholder, .contact-wrap__form textarea::-webkit-input-placeholder {
+    color: #c3c59e;   /* 薄グレーで見やすく */
+  }
+  .contact-wrap__form input::-moz-placeholder, .contact-wrap__form textarea::-moz-placeholder {
+    color: #aaa;   /* 薄グレーで見やすく */
+  }
+  .contact-wrap__form input:-ms-input-placeholder, .contact-wrap__form textarea:-ms-input-placeholder {
+    color: #aaa;   /* 薄グレーで見やすく */
+  }
+  .contact-wrap__form input::-ms-input-placeholder, .contact-wrap__form textarea::-ms-input-placeholder {
+    color: #aaa;   /* 薄グレーで見やすく */
+  }
+  .contact-wrap__form input::placeholder,
+  .contact-wrap__form textarea::placeholder {
+    color: #aaa;   /* 薄グレーで見やすく */
+  }
+  
+  
+  /* テキストエリアをそれっぽく */
+  .contact-wrap__form textarea {
+    min-height: 180px;
+    resize: vertical;
+  }
+  
+  /* 同意チェックなど横並びにしたい時のユーティリティ（必要なときに使う） */
+  .contact-wrap__form .is-inline {
+    grid-column: 1 / -1; /* 2カラムをまたぐ */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ddd;
+    font-size: 13px;
+  }
+  
+  /* 送信ボタン（中央・角丸・白枠） */
+  .contact-wrap__form__submit {
+    font-size:20px;
+    display: block;     /* inline-block ではなく block に */
+  margin: 60px auto 40px auto;  /* 左右自動で中央寄せ */
+  min-width: 240px;
+  padding: 14px 28px;
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .2s ease, opacity .2s ease;
+  }
+  .required {
+    display: inline-block;
+    color:#dd0000;
+    margin-left:5px;
+  }
+  .contact-wrap__form__submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px rgba(0,0,0,.45);
+  }
+  .contact-wrap__form__submit:active {
+    transform: translateY(0);
+    opacity: .9;
+  }
+.check-group {
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    gap:30px;
+}
+.checkboxtxt {
+    font-size: 16px;
+    line-height: 1.8;
+}
+  .contact-wrap__form__group label {
+    min-width: 180px; /* 左のラベル幅を固定 */
+  } 
+  input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    -webkit-appearance: auto;
+       -moz-appearance: auto;
+            appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+@media screen and (max-width: 600px) {
+    .contact-wrap__form {
+        max-width: 85%;
+        margin: 60px auto;
+    }
+    contact-wrap__form input[type="text"], .contact-wrap__form input[type="email"], .contact-wrap__form textarea {
+        max-width: none;
+    }
+    .contact-wrap__form input[type="text"], .contact-wrap__form input[type="email"], .contact-wrap__form textarea {
+        max-width: none;
+    }
+    .contact-wrap__form__group {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    
+      .check-group {
+        flex-direction: column;  /* ← スマホでは縦並び */
+        align-items: flex-start;
+      }
+    /* 全て1カラム化 */
+    .contact-wrap__form__group {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  
+    /* チェックボックスも縦並びに */
+    .check-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .check-group label {
+      min-width: auto;
+      margin-bottom: 6px;
+    }
+  
+    .contact-wrap__form__submit {
+      width: min(100%, 360px);
+    }
+  }

@@ -4,6 +4,12 @@
     <title>THE YAMANASHI INTERVIEW</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // 次ページ側：描画前に本文を隠す（ふわっの準備）
+      if (sessionStorage.getItem("PAGE_WIPE_NEXT") === "1") {
+        document.documentElement.classList.add("is-entering");
+      }
+    </script>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/top.css" />
@@ -38,32 +44,24 @@
             <div class="header-wrap__nav__right">
               <ul class="header-wrap__nav__right__menu">
                 <li class="header-wrap__nav__right__menu__item">
-                  <a href="#" class="header-wrap__nav__right__menu__item__link">
-                    メニュー1
+                  <a
+                    href="policy.html"
+                    class="header-wrap__nav__right__menu__item__link"
+                  >
+                    policy
                   </a>
                 </li>
                 <li class="header-wrap__nav__right__menu__item">
-                  <a href="#" class="header-wrap__nav__right__menu__item__link">
-                    メニュー2
-                  </a>
-                </li>
-                <li class="header-wrap__nav__right__menu__item">
-                  <a href="#" class="header-wrap__nav__right__menu__item__link">
-                    メニュー3
+                  <a
+                    href="contact.html"
+                    class="header-wrap__nav__right__menu__item__link"
+                    >contact
                   </a>
                 </li>
               </ul>
-              <div class="header-wrap__nav__right__sns">
-                <a href="#" class="header-wrap__nav__right__sns__link">
-                  <img src="img/X.svg" alt="X" />
-                </a>
-                <a href="#" class="header-wrap__nav__right__sns__link">
-                  <img src="img/youtube.svg" alt="youtube" />
-                </a>
-              </div>
               <div class="header-wrap__nav__right__fmlogo">
                 <a
-                  href="https://www.fujimishobo.co.jp/"
+                  href="https://www.fm-kofu.co.jp/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -106,7 +104,7 @@
             <div class="voice-wrap__group__body">
               <ul class="voice-wrap__group__body__list">
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice.svg" alt="社長1" />
@@ -121,7 +119,7 @@
                   </a>
                 </li>
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice2.svg" alt="社長1" />
@@ -136,7 +134,7 @@
                   </a>
                 </li>
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice3.svg" alt="社長1" />
@@ -151,7 +149,7 @@
                   </a>
                 </li>
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice4.svg" alt="社長1" />
@@ -166,7 +164,7 @@
                   </a>
                 </li>
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice5.svg" alt="社長1" />
@@ -201,7 +199,7 @@
             <div class="voice-wrap__group__body">
               <ul class="voice-wrap__group__body__list">
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice.svg" alt="社長1" />
@@ -216,7 +214,7 @@
                   </a>
                 </li>
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice2.svg" alt="社長1" />
@@ -231,7 +229,7 @@
                   </a>
                 </li>
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice3.svg" alt="社長1" />
@@ -246,7 +244,7 @@
                   </a>
                 </li>
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice4.svg" alt="社長1" />
@@ -261,7 +259,292 @@
                   </a>
                 </li>
                 <li class="voice-wrap__group__body__list__item">
-                  <a href="#">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice5.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="slick-slide-ui stories-ui">
+              <div class="slick-nav-box">
+                <button class="slick-arrow slick-prev"></button>
+                <div class="slick-count">
+                  <p class="txt">
+                    <span class="current">1</span>/<span class="total">5</span>
+                  </p>
+                </div>
+                <button class="slick-arrow slick-next"></button>
+              </div>
+            </div>
+          </div>
+          <div class="voice-wrap__group">
+            <div class="voice__ttl">
+              <img src="img/pickup3.svg" alt="title" />
+            </div>
+            <div class="voice-wrap__group__body">
+              <ul class="voice-wrap__group__body__list">
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice2.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice3.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice4.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice5.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="slick-slide-ui stories-ui">
+              <div class="slick-nav-box">
+                <button class="slick-arrow slick-prev"></button>
+                <div class="slick-count">
+                  <p class="txt">
+                    <span class="current">1</span>/<span class="total">5</span>
+                  </p>
+                </div>
+                <button class="slick-arrow slick-next"></button>
+              </div>
+            </div>
+          </div>
+          <div class="voice-wrap__group">
+            <div class="voice__ttl">
+              <img src="img/pickup4.svg" alt="title" />
+            </div>
+            <div class="voice-wrap__group__body">
+              <ul class="voice-wrap__group__body__list">
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice2.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice3.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice4.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice5.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="slick-slide-ui stories-ui">
+              <div class="slick-nav-box">
+                <button class="slick-arrow slick-prev"></button>
+                <div class="slick-count">
+                  <p class="txt">
+                    <span class="current">1</span>/<span class="total">5</span>
+                  </p>
+                </div>
+                <button class="slick-arrow slick-next"></button>
+              </div>
+            </div>
+          </div>
+          <div class="voice-wrap__group">
+            <div class="voice__ttl">
+              <img src="img/pickup5.svg" alt="title" />
+            </div>
+            <div class="voice-wrap__group__body">
+              <ul class="voice-wrap__group__body__list">
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice2.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice3.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
+                    <article>
+                      <figure>
+                        <img src="img/voice4.svg" alt="社長1" />
+                      </figure>
+                      <p class="voice-wrap__group__body__list__item__date">
+                        2025.08.04
+                      </p>
+                      <p class="voice-wrap__group__body__list__item__text">
+                        サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。サンプルテキストが入ります。
+                      </p>
+                    </article>
+                  </a>
+                </li>
+                <li class="voice-wrap__group__body__list__item">
+                  <a href="single.html">
                     <article>
                       <figure>
                         <img src="img/voice5.svg" alt="社長1" />
@@ -340,8 +623,12 @@
         <a href="#top" class="page_top"><span class="dli-arrow-up"></span></a>
       </footer>
     </main>
+    <div class="page-wipe" id="pageWipe" aria-hidden="true">
+      <div class="page-wipe__panel"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/slider.js"></script>
   </body>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="js/slider.js"></script>
 </html>

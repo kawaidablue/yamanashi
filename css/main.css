@@ -1,14 +1,62 @@
 @charset "UTF-8";
 html {
     scroll-behavior: smooth;
-    min-height:200vh;
 }
 body {
+    position: relative;
     font-family: 'Noto Sans JP', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #FECC34;
+}
+.header-wrap__nav {
+    display:flex;
+    justify-content:space-between;
+    margin: 0 50px;
+}
+.header-wrap__nav__logo{
+    position:relative;
+    display:inline-block;
+     z-index:1;
+}
+.header-wrap__nav__logo img{
+  position: relative;
+  z-index:999;
+  display:block;
+}
+.header-wrap__nav__right {
+        display:flex;
+    width:60%;
+    justify-content: flex-end;
+    gap:100px;
+}
+.header-wrap__nav__right__menu {
+    display:flex;
+    justify-content: space-between;
+    width:35%;
+    max-width: 200px;
+}
+.header-wrap__nav__right__menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+}
+.header-wrap__nav__right__fmlogo {
+    position:relative;
+     z-index:1;
+}
+.header-wrap__nav__right__fmlogo a img {
+    position: relative;
+    z-index:1;
+    display:block;
+}
+.header-wrap__nav__right__fmlogo .fmlogo-deco{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2; /* 必要に応じて */
 }
 .footer {
     background-color: black;
@@ -73,4 +121,122 @@ body {
   top: -0.05em;
   right: 50%;
   box-sizing: border-box;
+}
+html.is-entering body{
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+body{
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+
+/* enter開始後にON（ふわっ） */
+html.is-entering.is-entered body{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-wipe{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+  /* 何もしてない時は透明で存在だけ */
+}
+
+.page-wipe__panel{
+  position: absolute;
+  inset: 0;
+  background: #111;                 /* ワイプ色（好きに） */
+  transform: translateX(-110%);     /* 初期：左外 */
+}
+
+/* 離脱（クリックした瞬間：左→右に覆う） */
+.page-wipe.is-leave .page-wipe__panel{
+  -webkit-animation: wipeIn 650ms cubic-bezier(.7,0,.2,1) forwards;
+          animation: wipeIn 650ms cubic-bezier(.7,0,.2,1) forwards;
+}
+
+/* 入場（次ページで：右→右外へ抜ける） */
+.page-wipe.is-enter .page-wipe__panel{
+  transform: translateX(0%);
+  -webkit-animation: wipeOut 650ms cubic-bezier(.7,0,.2,1) forwards;
+          animation: wipeOut 650ms cubic-bezier(.7,0,.2,1) forwards;
+}
+
+@-webkit-keyframes wipeIn{
+  0%   { transform: translateX(-110%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes wipeIn{
+  0%   { transform: translateX(-110%); }
+  100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes wipeOut{
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(110%); }
+}
+
+@keyframes wipeOut{
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(110%); }
+}
+
+/* 動き苦手な人向け */
+@media (prefers-reduced-motion: reduce){
+  .page-wipe.is-leave .page-wipe__panel,
+  .page-wipe.is-enter .page-wipe__panel{
+    -webkit-animation: none;
+            animation: none;
+    transform: translateX(0%);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header-wrap__nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+  }
+.header-wrap__nav__right__menu {
+      justify-content: center;
+      gap:40px;
+}
+}
+@media screen and (max-width: 1000px) {
+  .header-wrap__nav__right {
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+    gap: 60px;
+}
+}
+@media screen and (max-width: 764px) {
+.footer-wrap {
+    max-width:800px;
+    margin:0 auto;
+    padding: 60px 0 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    position: relative;
+}
+.footer-wrap__logo {
+    margin: 0 auto;
+    border-radius: 15px;
+    width:180px;
+    background-color: #FECC34;
+}
+.footer-wrap__logo img {
+      width:100%;
+}
+.copylight {
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
 }

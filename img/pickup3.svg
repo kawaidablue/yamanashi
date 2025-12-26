@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="464" height="238" viewBox="0 0 464 238">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 80px;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-5 {
+        font-family: TrebuchetMS, Trebuchet MS;
+      }
+
+      .cls-2 {
+        font-size: 140px;
+      }
+
+      .cls-3, .cls-7 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #000;
+        stroke-width: 6px;
+      }
+
+      .cls-4 {
+        font-size: 28px;
+        letter-spacing: 0.16em;
+      }
+
+      .cls-5 {
+        fill: #fecc34;
+        font-size: 56px;
+      }
+
+      .cls-6 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ_220" data-name="グループ 220" transform="translate(-488 -1369)">
+    <text id="ickUp" class="cls-1" transform="translate(662 1501)"><tspan x="0" y="0">ickUp</tspan></text>
+    <text id="OICE" class="cls-1" transform="translate(556 1572)"><tspan x="0" y="0">OICE</tspan></text>
+    <text id="V" class="cls-2" transform="translate(488 1576)"><tspan x="0" y="0">V</tspan></text>
+    <text id="P" class="cls-2" transform="translate(596 1500)"><tspan x="0" y="0">P</tspan></text>
+    <g id="_7m5" data-name="7m5" class="cls-3" transform="translate(741 1516)">
+      <rect class="cls-6" width="211" height="57"/>
+      <rect class="cls-7" x="3" y="3" width="205" height="51"/>
+    </g>
+    <rect id="_7m5-2" data-name="7m5" width="53" height="57" transform="translate(899 1516)"/>
+    <text id="GROUP" class="cls-4" transform="translate(766 1554)"><tspan x="0" y="0">GROUP</tspan></text>
+    <text id="_3" data-name="3" class="cls-5" transform="translate(912 1564)"><tspan x="0" y="0">3</tspan></text>
+  </g>
+</svg>
