@@ -3,7 +3,7 @@
     padding-top:2%;
 }
 .header-wrap__nav__logo img {
-    width: 340px;
+    width: 100%;
     height:auto;
 }
 .header-wrap__nav__right__fmlogo img {
@@ -15,10 +15,9 @@
     align-items: flex-start;
 }
 .subttl {
-        padding: 90px 0 0 0;
-    margin-bottom:90px;
-    margin: 0 auto 60px auto;
-            max-width: 1000px;
+    padding: 50px 0 0 0;
+    margin: 0 auto 80px auto;
+    max-width: 1100px;
 }
 .subttl h2 {
     font-size: 80px;
@@ -31,7 +30,6 @@
 }
 @media screen and (max-width: 1280px) {
     .header-wrap__nav__logo img {
-    width:clamp(17.5rem, -2.75rem + 30vw, 21.25rem);
     height: auto;
 }
 .subttl {
@@ -45,25 +43,61 @@
     font-size: clamp(4rem, -1.4rem + 8vw, 5rem);
 }
 }
-@media screen and (max-width: 1080px) {
-        .header-wrap__nav__logo{
-        width: 25%;
-        height: auto;
-    }
-         .header-wrap__nav__logo img{
-        width: 100%;
-    }
-    .header-wrap__nav__right__fmlogo{
-    width: 65%;
-    }
-    .header-wrap__nav__right__fmlogo img {
-    width: 100%;
-    height: auto;
+@media screen and (max-width: 1000px) {
+    .header-wrap__nav__logo {
+        width:20%;
+}
+.header-wrap__nav__right__fmlogo img {
+    width: 200px;
 }
 .header-wrap__nav__right__menu a {
     font-size: 14px;
 }
-.header-wrap__nav__right__menu {
+    .header-wrap__nav__right {
+        gap: 30px;
+    }
+    .subttl {
+    padding: 20px 0 0 0;
+    margin: 0 auto 50px auto;
+}
+}
+@media screen and (max-width: 760px) {
+    .header-wrap__nav__right__fmlogo img {
+        width: 130px;
+    }
+        .header-wrap__nav__right {
+        width: 80%;
+    }
+        .subttl {
+    padding: 0 0 0 0;
+    margin: 0 auto 30px auto;
+}
+}
+@media screen and (max-width: 540px) {
+    .header-wrap__nav__logo img {
+    width: clamp(5.625rem, 3.8393rem + 7.1429vw, 6.25rem);
+}
+.header-wrap__nav__right__menu a {
+    font-size: 12px;
+}
+    .header-wrap__nav__right__fmlogo img {
+        width: clamp(5.625rem, 3.8393rem + 7.1429vw, 6.25rem);
+    }
+    .header-wrap__nav {
+        margin: 0 10px;
+    }
+    .header-wrap__nav__right__menu__item{
+        font-size:12px;
+    }
+}
+@media screen and (max-width: 340px) {
+.header-wrap__nav__right__fmlogo img {
+        width: 80px;
+    } 
+        .header-wrap__nav__logo img {
+    width: 80px;
+}
+    .header-wrap__nav__right__menu {
         gap: 20px;
     }
 }

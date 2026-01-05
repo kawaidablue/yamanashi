@@ -24,8 +24,11 @@
     padding:1% 1.5%;
 }
 @media screen and (max-width:768px) {
+        .subttl strong {
+        font-size: 54px;
+    }
     .policy-wrap__ttl h2 {
-        font-size: 48px;
+        font-size: 42px;
     }
     .policy-wrap__ttl small {
         font-size: 16px;
@@ -44,8 +47,11 @@
 }
 }
 @media screen and (max-width:480px) {
+           .subttl strong {
+        font-size: 48px;
+    }
     .policy-wrap__ttl h2 {
-        font-size: 36px;
+        font-size: 32px;
     }
     .policy-wrap__ttl small {
         font-size: 14px;

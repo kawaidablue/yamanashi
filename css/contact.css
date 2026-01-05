@@ -112,9 +112,18 @@
     padding: initial;
     border: initial;
 }
+@media screen and (max-width: 850px) {
+  .contact-wrap__form {
+    width:92%;
+}
+  .contact-wrap__form input[type="text"], 
+  .contact-wrap__form input[type="email"], 
+  .contact-wrap__form textarea {
+    padding: 14px 5px;
+}
+}
 @media screen and (max-width: 600px) {
     .contact-wrap__form {
-        max-width: 85%;
         margin: 60px auto;
     }
     contact-wrap__form input[type="text"], .contact-wrap__form input[type="email"], .contact-wrap__form textarea {
@@ -124,8 +133,9 @@
         max-width: none;
     }
     .contact-wrap__form__group {
-        grid-template-columns: 1fr;
-        gap: 8px;
+      flex-direction: column;
+        gap: 15px;
+
       }
     
       .check-group {
@@ -152,4 +162,15 @@
     .contact-wrap__form__submit {
       width: min(100%, 360px);
     }
-  }
+    .checkboxtxt {
+    font-size: 14px;
+}
+}
+@media screen and (max-width:540px) {
+           .subttl strong {
+        font-size: 48px;
+    }
+    .contact-wrap__ttl h2 {
+        font-size: 32px;
+    }
+}
